@@ -1,0 +1,16 @@
+http://justinwatson.name/2017/02/10/Setting_up_pydot_for_Python_3_5_Keras_Conda_Windows_64.html
+
+https://stackoverflow.com/questions/40632486/dot-exe-not-found-in-path-pydot-on-python-windows-7
+
+I followed the instructions given in the blog below. http://www.codesofinterest.com/2017/02/visualizing-model-structures-in-keras.html
+
+Then i installed graphviz from here http://www.graphviz.org/download/ and added C:\Program Files (x86)\Graphviz2.38\bin to PATH
+
+Next I did:
+
+    conda install pydot-ng 
+
+And finally in my notebook I added the two lines below.
+
+    import os
+    os.environ["PATH"] += os.pathsep + 'C:/Program Files (x86)/Graphviz2.38/bin/'
